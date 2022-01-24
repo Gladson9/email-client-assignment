@@ -9,5 +9,7 @@ export const dateFormat = (date) => {
   }
 
   let time = newDate.toLocaleTimeString();
-  return `${day}/${month}/${year} ${time.slice(0, -6)}${time.slice(-2)}`;
+  return `${day}/${month}/${year} ${time.slice(0, -6)}${time
+    .slice(-2)
+    .toLowerCase()}`;
 };
