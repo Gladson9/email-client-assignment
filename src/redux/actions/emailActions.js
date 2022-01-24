@@ -23,4 +23,18 @@ export const getEmailBody = (details) => async (dispatch) => {
       },
     });
   });
+  dispatch({
+    type: "MARK_READ",
+    payload: details,
+  });
 };
+
+export const markFavorite = (details) => ({
+  type: "MARK_FAVORITE",
+  payload: details,
+});
+
+export const applyFilters = (value) => ({
+  type: "APPLY_FILTERS",
+  payload: value,
+});
